@@ -1,0 +1,8 @@
+huepy
+requests
+tqdm
+requests
+string
+sys
+os
+argparse

